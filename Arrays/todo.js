@@ -1,5 +1,8 @@
-const naraesToDoList = ['Go shopping', 'Hoover', 'Make salad', 'Hang washing', 'Clean bathroom']
+const todos = ['Go shopping', 'Hoover', 'Make salad', 'Hang washing', 'Clean bathroom']
 
-console.log(`You have ${naraesToDoList.length} todos!`)
-console.log(`Todo: ${naraesToDoList[0]}`)
-console.log(`Todo: ${naraesToDoList[naraesToDoList.length - 2]}`)
+todos.splice(2, 1)
+todos.push('Study')
+todos.shift()
+
+console.log(`You have ${todos.length} todos!`)
+console.log(todos)
