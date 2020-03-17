@@ -10,7 +10,7 @@ const notes = ['Note 1', 'Note 2', 'Note 3']
 
 notes[2] = 'This is now the new note 3'
 
-notes.forEach(function () {
+notes.forEach(function (item, index) {
     console.log(index)
     console.log(item)
 })
@@ -19,4 +19,10 @@ notes.forEach(function () {
 console.log(notes.length)
 console.log(notes)
 
-for () {}
+for (let count = 0; count <= 2; count++) {  // initialiser (where to begin) condition (if true run again if false stop) increment (what to do each time)
+    console.log(count)
+}
+
+for (let count = 0; count < notes.length; count++) {
+    console.log(notes[count])
+}
