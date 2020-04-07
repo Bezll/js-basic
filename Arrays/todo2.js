@@ -6,23 +6,31 @@ const todos = [{
     completed: true
 }, { 
     text: 'Make salad',
-    complted: false
+    completed: false
 }, { 
-     text: 'Hang washing',
-     completed: true
+    text: 'Hang washing',
+    completed: true
 }, {
     text:'Clean bathroom',
-    complted: false
+    completed: false
 }]
 
-const deleteTodo = function (todos, todoText) {
-    const index = todos.findIndex(function (todo, index) {
-        return todo.text.toLowerCase() === todoText.toLowerCase()
+// const deleteTodo = function (todos, todoText) {
+//     const index = todos.findIndex(function (todo, index) {
+//         return todo.text.toLowerCase() === todoText.toLowerCase()
+//     })
+//     if (index > -1) {
+//         todos.splice(index, 1)
+//     }
+// }
+
+// deleteTodo(todos, 'make salad')
+// console.log(todos)
+
+const findNotes = function (todos) {
+    return todos.filter(function (todo, index) {
+        return todo.completed === false
     })
-    if (index > -1) {
-        todos.splice(index, 1)
-    }
 }
 
-deleteTodo(todos, 'make salad')
-console.log(todos)
+console.log(findNotes(todos))
