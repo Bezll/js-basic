@@ -4,7 +4,6 @@
 
 let gradeCalculator = function (studentScore, totalPosScore) {
     let gradePercent = (studentScore / totalPosScore) * 100
-    let gradeScoring = 'No Score'
     
     if (gradePercent >= 90) {
         gradeScoring = 'A'
@@ -21,8 +20,11 @@ let gradeCalculator = function (studentScore, totalPosScore) {
     else if (gradePercent >= 50) {
         gradeScoring = 'E'
     }
-    else  if (gradePercent >= 1) {                  
+    else  if (gradePercent >= 40) {                  
         gradeScoring = 'F'
+    }
+    else {
+        gradeScoring = 'U'
     }
     return `You got a ${gradeScoring} (${gradePercent}%)!`;
 }

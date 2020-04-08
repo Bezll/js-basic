@@ -6,10 +6,10 @@ let resturant = {
         let seatsLeft = this.guestCapacity - this.guestCount
         return partySize <= seatsLeft
     },
-    seatParty: function (partySize) {
+    seatParty: function (newArrivals) {
         this.guestCount = this.guestCount + newArrivals
     },
-    removeParty: function (partySize) {
+    removeParty: function (departing) {
         this.guestCount = this.guestCount - departing
     }
 }

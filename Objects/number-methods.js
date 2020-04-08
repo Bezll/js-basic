@@ -1,13 +1,13 @@
-// let num = 103.941
+let num = 103.941
 
-// console.log(num.toFixed(2)) // fixed decimal place
-// console.log(Math.round(num)) // round to nearest
-// console.log(Math.floor(num)) // round down
-// console.log(Math.ceil(num))  // round up
+console.log(num.toFixed(2)) // fixed decimal place
+console.log(Math.round(num)) // round to nearest
+console.log(Math.floor(num)) // round down
+console.log(Math.ceil(num))  // round up
 
-// let min = 0
-// let max = 1
-// let randomNum = Math.floor(Math.random() * (max-min + 1)) + min
+let min = 0
+let max = 1
+let randomNum = Math.floor(Math.random() * (max-min + 1)) + min
 
 // Challenge area 
 // 1 - 5 - true if correct - false if not correct 
