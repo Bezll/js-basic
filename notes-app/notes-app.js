@@ -1,14 +1,37 @@
-// DOM - Document Object Model
+const notes = [{
+    title: 'My next trip',
+    body: 'I would like to go to Spain'
+}, {
+    title: 'Habbits to work on',
+    body: 'Exercise. Eating a bit better'
+}, {
+    title: 'Office modification',
+    body: 'Get a new seat'
+}]
 
-// Query and Remove
-const p = document.querySelector('p')
-p.remove()
-
-// Query all and remove
-const ps = document.querySelectorAll('p')
-
-ps.forEach(function (p) {
-    p.textContent = '********' // Overwrite
-    console.log(p.textContent) // Print content
-    // p.remove()
+document.querySelector('#create-note').addEventListener('click', function (e) {    // Button 
+    e.target.textContent = 'The button was clicked'
 })
+
+document.querySelector('#remove-all').addEventListener('click', function () {
+    document.querySelectorAll('.note').forEach(function( note) {
+        note.remove()
+    })
+})
+
+
+// HTML identifier tags
+
+// # identifies ID 
+// . identifies Class
+
+// -- Single --
+// p
+// #replace
+// .item
+
+// --Multiple -- 
+// p#order
+// button.inventory
+// h1#title.application
+// h1.application#title
