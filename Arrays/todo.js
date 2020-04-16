@@ -16,3 +16,4 @@ for (count = 0; count < todos.length; count++) {
     const todo = todos[count]
     console.log(`${num}. ${todo}`)
 }
+//NOTE** mynote

@@ -12,6 +12,11 @@ const notes = [{
 console.log(notes.pop()) // remove end
 notes.push('My new note') // add end
 
+notes.push( { // can add ojects as well
+    title:
+    body:
+})
+
 console.log(notes.shift()) // remove begining
 notes.unshift('My first note') // add begining 
 
