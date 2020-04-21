@@ -28,3 +28,16 @@ ps.forEach(function (p) {
 const newParagraph = document.createElement('p')
 newParagraph.textContent = 'This is a new element from JavaScript'
 document.querySelector('body').appendChild(newParagraph)
+
+// HTML for a form
+<form id="name-form">
+            <input type="text" placeholder="First Name" name="firstName">
+            <button>Submit</button>
+        </form>
+
+// Event handler for form
+document.querySelector('#name-form').addEventListener('submit', function (e) {
+    e.preventDefault()
+    console.log(e.target.elements.firstName.value)
+    e.target.elements.firstName.value = ''
+})
