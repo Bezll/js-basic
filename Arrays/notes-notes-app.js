@@ -36,8 +36,52 @@ document.querySelector('body').appendChild(newParagraph)
         </form>
 
 // Event handler for form
+
 document.querySelector('#name-form').addEventListener('submit', function (e) {
     e.preventDefault()
     console.log(e.target.elements.firstName.value)
     e.target.elements.firstName.value = ''
 })
+
+
+// const user = { */}
+//     name: 'Andrew',
+//     age: 27
+// }
+// const userJSON = JSON.stringify(user)
+// console.log(userJSON)
+// localStorage.setItem('user', userJSON)
+
+// const userJSON = localStorage.getItem('user')
+// const user = JSON.parse(userJSON)
+// console.log(`${user.name} is ${user.age}`)
+
+// document.querySelector('#remove-all').addEventListener('click', function () {
+//     document.querySelectorAll('.note').forEach(function( note) {
+//         note.remove()
+//     })
+// })
+
+// HTML identifier tags
+
+// # identifies ID 
+// . identifies Class
+
+// -- Single --
+// p
+// #replace
+// .item
+
+// --Multiple -- 
+// p#order
+// button.inventory
+// h1#title.application
+// h1.application#title
+
+// filteredTodos = filteredTodos.filter(function (todo) {
+    //     if (filters.hideCompleted) {
+    //         return !todo.completed
+    //     } else {
+    //         return true
+    //     }
+    // })
