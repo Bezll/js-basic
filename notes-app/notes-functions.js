@@ -68,3 +68,8 @@ const renderNotes = function (notes, filters) {
         document.querySelector('#notes').appendChild(noteEl)
     })
 }
+
+// Generate the last edited message 
+const generateLastEdited = function (timestamp) {
+    return `Last Edited ${moment(timestamp).fromNow('ss')}`
+}
