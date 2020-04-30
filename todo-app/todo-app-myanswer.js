@@ -24,18 +24,14 @@ const hideCompletedFilters = {
 }
 
 
-const renderTodos = function (todos, filters, hideCompletedFilters, checked = false) {
-    const filteredTodos = todos.filter(function (todo) {
-        return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
-    }) // filters the todos by text name
+const renderTodos = (todos, filters, hideCompletedFilters, checked = false) => {
+    const filteredTodos = todos.filter((todo) => todo.text.toLowerCase().includes(filters.searchText.toLowerCase()))
 
-    const incompleteTodos = filteredTodos.filter(function (todo) {
-        return !todo.completed
-    })
+    // filters the todos by text name
+const incompleteTodos = filteredTodos.filter((todo) => !todo.completed)
 
-    const hideCompletedF = todos.filter(function (todo) {
-        return todo.completed !== hideCompletedFilters.hideCompleted
-    })
+const hideCompletedF = todos.filter((todo) => todo.completed !== hideCompletedFilters.hideCompleted
+    
     document.querySelector('#todos').innerHTML = ''
 
     const summary = document.createElement('h2')
@@ -72,12 +68,12 @@ renderTodos(todos, filters, hideCompletedFilters)
 //     console.log(e.target.value)
 // })
 
-document.querySelector('#search-text').addEventListener('input', function (e) {
+document.querySelector('#search-text').addEventListener('input', (e) => {
     filters.searchText = e.target.value
     renderTodos(todos, filters, hideCompletedFilters)
 })
 
-document.querySelector('#new-todo').addEventListener('submit', function (e) {
+document.querySelector('#new-todo').addEventListener('submit', (e) => {
     e.preventDefault()
     todos.push({
         text: e.target.elements.text.value,
@@ -87,7 +83,7 @@ document.querySelector('#new-todo').addEventListener('submit', function (e) {
     e.target.elements.text.value = '';
 })
 
-document.querySelector('#hide-completed').addEventListener('change', function (e) {
+document.querySelector('#hide-completed').addEventListener('change', (e) => {
     hideCompletedFilters.hideCompleted = e.target.checked
     renderTodos(todos, filters, hideCompletedFilters, e.target.checked)
 })
