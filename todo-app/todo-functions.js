@@ -1,16 +1,16 @@
+'use strict'
+
 // Fetch existing todos from localStorage
 const getSavedTodos = () => {
     const todosJSON = localStorage.getItem('todos')
 
-    if (todosJSON) {
-        console.log(todosJSON, '<<current storage when localstorage is set')
-        return JSON.parse(todosJSON)
-    } else {
-        console.log(todosJSON)
-        console.log('<<current storage when localstorage is not set')
+    try {
+        return todosJSON ? JSON.parse(todosJSON) : []
+    } catch (e) {
         return []
     }
 }
+
 // Save todos to localStorage
 const saveTodos = (todos) => {
     localStorage.setItem('todos', JSON.stringify(todos))
@@ -30,7 +30,7 @@ const removeTodo = (id) => {
 const toggleTodo = (id) => {
     const todo = todos.find((todo) => todo.id === id)
         
-    if (todo !== undefined) {
+    if (todo) {
         todo.completed = !todo.completed
     }
 }
