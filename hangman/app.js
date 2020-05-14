@@ -7,17 +7,43 @@
 // Number: myNumber --> Number.prototype --> Object.prototype --> null
 // Boolean: myBoolean --> Boolean.prototype --> Object.prototype --> null
 
+
+// HTTP (Hypertext Transfer Protocol)
+// Request - What we want to do
+// Response - What was actually done
+
 const puzzleEl = document.querySelector('#puzzle')
 const guessesEl = document.querySelector('#guesses')
-const game1 = new Hangman('hajima', 8)
+const game1 = new Hangman('hajima boo', 8)
 
 puzzleEl.textContent = game1.puzzle
 guessesEl.textContent = game1.statusMessage
 
 
-window.addEventListener('keypress', function (e) {
+window.addEventListener('keypress', (e) => {
     const guess = String.fromCharCode(e.charCode)
     game1.makeGuess(guess)
     puzzleEl.textContent = game1.puzzle
     guessesEl.textContent = game1.statusMessage
 })
+
+getPuzzle("2", (error, puzzle) => {
+    if (error) {
+        console.log(`Error: ${error}`)
+    } else {
+        console.log(puzzle)
+    }
+})
+
+getCountryCode('GB', (error, country) => {
+    if (error) {
+        console.log(error)
+    } else {
+        console.log(`Country name: ${country.name}`)
+    }
+})
+
+
+
+
+

@@ -6,7 +6,7 @@ class Hangman {
         this.status = 'Playing'
     }
     calculateStatus() {
-        const finished = this.word.every((letter) => this.guessedLetters.includes(letter))
+        const finished = this.word.every((letter) => this.guessedLetters.includes(letter) || letter === ' ')
 
         if (this.remainingGuesses <= 0) {
             this.status = 'Failed'
@@ -40,7 +40,7 @@ class Hangman {
     }
     makeGuess(guess) {
         guess = guess.toLowerCase()
-        const isUnique = !this.guessedLetters.includes(guess)
+        const isUnique = !this.guessedLetters.includes(guess)  
         const isBadGuess = !this.word.includes(guess)
 
         if (this.status !== 'Playing') {
