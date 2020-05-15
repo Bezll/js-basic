@@ -1,6 +1,6 @@
 
 // Lexical scope (static scope)
-// Global scope - Defined otside of all code bocks
+// Global scope - Defined outside of all code bocks
 // Local scope - Defined inside a code block
 
 // In a scope you can access variables defined in that scope, or in any parent/ancestor scope

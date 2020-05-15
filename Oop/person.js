@@ -16,8 +16,8 @@ class Person {
         })
         return bio
     }
-    set fullName(fullName) {
-        const names = fullName.split(' ')
+    set fullName(fullName) {//'Narae Kim' 
+        const names = fullName.split(' ') //['narae', 'kim']
         this.firstName = names[0]
         this.lastName = names[1]
     }
@@ -53,9 +53,13 @@ class Student extends Person {
     }
 }
 
-const meStudent = new Employee('Andrew', 'Mead', 27, 'Teacher', [])
-meStudent.fullName = 'Clancey Turner'
-console.log(meStudent.getBio())
+const person1 = new Person('Jabez', 'Souttar', 28, ['Gardening', 'Narae'])
+console.log(person1.getBio(), 'first')
+const student1 = new Student('Narae', 'Kim', 29, 99, ['Bez', 'Being Silly'])
+console.log(student1.getBio(), 'second')
+const employee1 = new Employee('Andrew', 'Mead', 27, 'Teacher', [])
+employee1.fullName = 'Clancey Turner'
+console.log(employee1.getBio(), 'third')
 
 
 

@@ -30,3 +30,22 @@ const requestCountry = new XMLHttpRequest()
 requestCountry.open('GET', 'http://restcountries.eu/rest/v2/all')
 requestCountry.send()
 }
+
+// Calls
+
+
+getPuzzle("2", (error, puzzle) => {
+    if (error) {
+        console.log(`Error: ${error}`)
+    } else {
+        console.log(puzzle)
+    }
+})
+
+getCountryCode('GB', (error, country) => {
+    if (error) {
+        console.log(error)
+    } else {
+        console.log(`Country name: ${country.name}`)
+    }
+})
