@@ -48,3 +48,17 @@ getCountryCode('GB').then((country) => {
 }, (err) => {
     console.log(`Error: ${err}`)
 })
+
+// Stand-alone Fetch example
+
+fetch('http://puzzle.mead.io/puzzle', {}).then((response) => {
+    if (response.status === 200) {
+        return response.json()
+    } else {
+        throw new Error('Unable to fetch puzzle')
+    }
+}).then((data) => {
+    console.log(data.puzzle)
+}).catch((err) => {
+    console.log(err)
+})

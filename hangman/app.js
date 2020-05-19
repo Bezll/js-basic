@@ -28,21 +28,20 @@ getPuzzle('2').then((puzzle) => {
     console.log(`Error: ${err}`)
 })
 
+// This has been combined in the below code using promise chaining
+
 // getCountryCode('GB').then((country) => {
 //     console.log(`Country name: ${country.name}`)
-// }, (err) => {
+// }).catch((err) => {
 //     console.log(`Error: ${err}`)
 // })
 
-// fetch('http://puzzle.mead.io/puzzle', {}).then((response) => {
-//     if (response.status === 200) {
-//         return response.json()
-//     } else {
-//         throw new Error('Unable to fetch puzzle')
-//     }
-// }).then((data) => {
-//     console.log(data.puzzle)
-// }).catch((err) => {
-//     console.log(err)
-// })
+getLocation().then((location) => {
+    return getCountryCode(location.country)
+}).then((country) => {
+    console.log(country.name)
+}).catch((err) => {
+    console.log(`Error: ${err}`)
+})
+
 
