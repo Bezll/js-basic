@@ -1,0 +1,22 @@
+{
+  "name": "babel-tutorial",
+  "version": "1.0.0",
+  "description": "setting-up-babel-for-js-basic",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "y"
+  },
+  "keywords": [
+    "babel"
+  ],
+  "author": "bez",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6"
+  }
+}
